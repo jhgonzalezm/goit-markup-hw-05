@@ -3,7 +3,7 @@
   --secundary-font: 'Raleway', Sans-serif;
   --main-introducion: #2f303a;
   --web-color: #2196f3;
-  --text-color: #000000;
+  --text-color: #000;
   --span-color: #757575;
   --body-color: #212121;
   --contact-color: #d94f4f;
@@ -11,7 +11,7 @@
   --bc-color-light: #f5f4fa;
 
   --button-bgc: #2196f3;
-  --basic-color: #ffffff;
+  --basic-color: #fff;
   --bg-color-equipo: #f5f4fa;
 
   --tx-color-valores: #00000033;
@@ -20,7 +20,7 @@
   --icon-color: #afb1b8;
   --icon-fill: #2196f3;
 
-  --border-target: #eeeeee;
+  --border-target: #eee;
 }
 
 * {
@@ -304,6 +304,8 @@ span {
   padding-bottom: 28px;
   text-align: center;
 }
+
+/* --------------------------------- */
 .img-portafolio {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +314,18 @@ span {
   justify-content: center;
   margin: 0px 0px 0px 0px;
   padding-bottom: 30px;
+}
+
+.img-portafolio li {
+  width: 370px;
+  box-sizing: border-box;
+}
+
+.img-portafolio li:hover {
+  border: 1px solid var(--border-target);
+  background: var(--basic-color);
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .img-portafolio li h3 {
@@ -357,9 +371,12 @@ span {
 
 /*-----Equipo---------*/
 .shadow-equipo > li {
-  box-shadow: 0px 2px 1px 0px #00000033;
-  box-shadow: 0px 1px 1px 0px #00000024;
-  box-shadow: 0px 1px 3px 0px #0000001f;
+  border-radius: 0px 0px 4px 4px;
+  background: #fff;
+
+  /* material shadow v1 */
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .shadow-equipo h4 {
   background-color: var(--basic-color);
@@ -369,6 +386,10 @@ span {
 }
 .hero-navigation a[class='current'] {
   color: var(--web-color);
+}
+.hero-navigation-filter .current {
+  background-color: var(--web-color);
+  color: var(--basic-color);
 }
 .main-equipo {
   background-color: var(--bg-color-equipo);
