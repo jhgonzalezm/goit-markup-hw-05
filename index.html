@@ -26,7 +26,7 @@
       <nav class="container navigation-container">
         <a class="nav-web" href="#">WebStudio</a>
         <ul class="hero-navigation">
-          <li><a class="current" href="index.html">Estudio</a></li>
+          <li class="current-nav"><a class="current hero-item" href="index.html">Estudio</a></li>
           <li><a href="portafolio.html">Portafolio</a></li>
           <li><a href="#">Contactos</a></li>
         </ul>
@@ -50,9 +50,25 @@
       <section id="main__introduction" class="main-introduction">
         <div class="hero-section container">
           <h1 class="h1-introduction">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-          <button class="button-text-index">Solicite nuestro servicio</button>
+          <button class="button-text-index button-hover" data-modal-open>Solicite nuestro servicio</button>
         </div>
       </section>
+
+      <section class="modal-container">
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button type="button" class="boton-modal m-0 p-0" data-modal-close>
+              <!-- <div class="icon-boton-modal m-0 p-0"> -->
+                <svg class="icon-modal">
+                  <!-- <use href = './images/icons/symbol-defs.svg#icon-rs-linkedin'> -->
+                    <use href = './images/icons-modal/symbol-defs.svg#icon-close-x'></use>
+                </svg>
+              <!-- </div> -->
+            </button>
+          </div>
+        </div>
+      </section>
+
       <section id="main__valores" class="container">
         <div class="div-main-valores">
           <ul class="main-navigation">
@@ -300,57 +316,56 @@
           </ul>
         </div>
       </section>
-    </main>
-
-    <section>
-      <div class="container">
-        <h2 class="text-clients">Clientes Regulares</h2>
-        <ul class="group-client">
-          <li>
+      <section>
+        <div class="container">
+          <h2 class="text-clients">Clientes Regulares</h2>
+          <ul class="group-client">
+            <li>
+                <a href="#" class="icon-cli-container">
+                  <svg class="icon-cli">
+                    <use href = './images/icons/symbol-defs.svg#icon-cli-1'>
+                  </svg>
+                </a>
+            </li>
+            <li>
               <a href="#" class="icon-cli-container">
                 <svg class="icon-cli">
-                  <use href = './images/icons/symbol-defs.svg#icon-cli-1'>
+                  <use href = './images/icons/symbol-defs.svg#icon-cli-2'>
                 </svg>
               </a>
-          </li>
-          <li>
-            <a href="#" class="icon-cli-container">
-              <svg class="icon-cli">
-                <use href = './images/icons/symbol-defs.svg#icon-cli-2'>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon-cli-container">
-              <svg class="icon-cli">
-                <use href = './images/icons/symbol-defs.svg#icon-cli-3'>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon-cli-container">
-              <svg class="icon-cli">
-                <use href = './images/icons/symbol-defs.svg#icon-cli-4'>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon-cli-container">
-              <svg class="icon-cli">
-                <use href = './images/icons/symbol-defs.svg#icon-cli-5'>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icon-cli-container">
-              <svg class="icon-cli">
-                <use href = './images/icons/symbol-defs.svg#icon-cli-6'>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+            </li>
+            <li>
+              <a href="#" class="icon-cli-container">
+                <svg class="icon-cli">
+                  <use href = './images/icons/symbol-defs.svg#icon-cli-3'>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="icon-cli-container">
+                <svg class="icon-cli">
+                  <use href = './images/icons/symbol-defs.svg#icon-cli-4'>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="icon-cli-container">
+                <svg class="icon-cli">
+                  <use href = './images/icons/symbol-defs.svg#icon-cli-5'>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="icon-cli-container">
+                <svg class="icon-cli">
+                  <use href = './images/icons/symbol-defs.svg#icon-cli-6'>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container">
         <ul class="nav-footer-all">
@@ -414,5 +429,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
