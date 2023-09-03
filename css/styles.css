@@ -638,3 +638,40 @@ span {
 .nav-web:focus {
   outline: none;
 }
+/* Task 5 */
+.m-0 {
+  margin: 0;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.img-container:hover > .img-container-text {
+  top: 0;
+}
+.img-container-text {
+  box-sizing: border-box;
+  position: absolute;
+  /* top: 0; */
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 23px;
+  transition: top 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: var(--basic-color);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.555;
+  letter-spacing: 0.54px;
+  /* Efecto transparencia bifuminado 
+  backdrop-filter: blur(2px);*/
+}
