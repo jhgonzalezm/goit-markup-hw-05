@@ -127,6 +127,9 @@ button {
   background-color: var(--web-color);
   display: block;
   margin: 0 auto;
+
+  border: none;
+  border-radius: 4px;
 }
 
 .button-hover:hover {
@@ -188,7 +191,7 @@ p {
   font-weight: 400;
 }
 .main-introduction {
-  width: 1600px;
+  max-width: 1600px;
   justify-content: center;
   background-image: linear-gradient(
       to bottom,
@@ -196,6 +199,7 @@ p {
       rgba(0, 0, 0, 0.4)
     ),
     url('../images/head-image.jpg');
+  margin: auto;
 }
 .footer {
   background-color: var(--main-introducion);
@@ -686,8 +690,8 @@ span {
 /* Ventana modal */
 
 .backdrop {
-  width: 1600px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
   flex-shrink: 0;
   position: fixed;
   top: 0;
@@ -696,6 +700,8 @@ span {
 .modal {
   width: 528px;
   height: 581px;
+  /* width: 176px;
+  height: 193px; */
 
   border-radius: 4px;
   background: var(--basic-color);
@@ -705,7 +711,14 @@ span {
   position: fixed;
   top: 221px;
   left: 536px;
-  transform: translate(-50% -50%);
+  opacity: 0;
+
+  transition: opacity 3s;
+  opacity: 1;
+  /* 
+  transition: transform 3s;
+  transform: scale(3); */
+  /* transform: translate(-50% -50%); */
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -732,6 +745,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .icon-modal {
   width: 18px;
@@ -740,4 +754,45 @@ span {
 .icon-x {
   width: 18px;
   height: 18px;
+}
+
+/* faltó en tarea 5 */
+
+.img-dedicamos-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-dedicamos-container-text {
+  box-sizing: border-box;
+  position: absolute;
+  top: 224px;
+  width: 100%;
+  height: 70px;
+  line-height: 1.142;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  /* padding: 63px 23px;
+  transition: top 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
+
+  color: var(--basic-color);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  /* Efecto transparencia bifuminado 
+  backdrop-filter: blur(2px);*/
+}
+
+.contact-hover:hover {
+  color: var(--basic-color);
+  opacity: 100%;
 }
