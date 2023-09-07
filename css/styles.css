@@ -696,12 +696,20 @@ span {
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  /* display: none; */
 }
 .modal {
   width: 528px;
   height: 581px;
-  /* width: 176px;
-  height: 193px; */
 
   border-radius: 4px;
   background: var(--basic-color);
@@ -709,24 +717,14 @@ span {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   position: fixed;
-  top: 221px;
+  top: 90px;
   left: 536px;
-  opacity: 0;
-
-  transition: opacity 3s;
-  opacity: 1;
-  /* 
-  transition: transform 3s;
-  transform: scale(3); */
-  /* transform: translate(-50% -50%); */
 }
+
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-.is-hidden {
-  display: none;
 }
 
 .boton-modal {
@@ -738,14 +736,16 @@ span {
   align-content: center;
   margin-left: 490px;
   margin-top: 8px;
-}
-.boton-modal {
   background-color: var(--basic-color);
   border: 1px solid #0000001a;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.boton-modal:hover,
+.boton-modal:focus {
+  fill: var(--icon-fill);
 }
 .icon-modal {
   width: 18px;
@@ -755,6 +755,8 @@ span {
   width: 18px;
   height: 18px;
 }
+
+/*  Fin modal */
 
 /* faltó en tarea 5 */
 
@@ -777,9 +779,6 @@ span {
   align-items: center;
 
   background: rgba(47, 48, 58, 0.8);
-
-  /* padding: 63px 23px;
-  transition: top 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 
   color: var(--basic-color);
   font-family: Roboto;
