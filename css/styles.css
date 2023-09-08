@@ -695,7 +695,7 @@ span {
   flex-shrink: 0;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
 
   opacity: 1;
   visibility: visible;
@@ -708,6 +708,12 @@ span {
   /* display: none; */
 }
 .modal {
+  top: 90px;
+  left: 536px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   width: 528px;
   height: 581px;
 
@@ -717,8 +723,6 @@ span {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   position: fixed;
-  top: 90px;
-  left: 536px;
 }
 
 .backdrop.is-hidden {
